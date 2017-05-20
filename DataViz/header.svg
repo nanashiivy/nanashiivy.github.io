@@ -3,41 +3,38 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1600.1 848.2" style="enable-background:new 0 0 1600.1 848.2;" xml:space="preserve">
 <style type="text/css">
-	.st0{display:none;}
-	.st1{display:inline;fill:#F3F3F5;}
-	.st2{fill:none;}
-	.st3{fill:#444444;}
-	.st4{font-family:'GillSansMT-Bold';}
-	.st5{font-size:38px;}
-	.st6{font-size:20px;}
-	.st7{font-family:'GillSansMT';}
-	.st8{font-size:17px;}
-	.st9{letter-spacing:-0.9;}
-	.st10{font-family:'GillSans';}
-	.st11{font-size:24px;}
+	.st0{fill:none;}
+	.st1{fill:#444444;}
+	.st2{font-family:'GillSansMT-Bold';}
+	.st3{font-size:38px;}
+	.st4{font-size:20px;}
+	.st5{font-family:'GillSansMT';}
+	.st6{font-size:17px;}
+	.st7{letter-spacing:-0.9;}
+	.st8{font-family:'GillSans';}
+	.st9{font-size:24px;}
 </style>
-<g id="Layer_2" class="st0">
-	<rect y="1.5" class="st1" width="1600.1" height="846.7"/>
+<g id="Layer_2">
 </g>
 <g id="Layer_1">
-	<rect x="70.1" y="70.9" class="st2" width="593.9" height="153"/>
-	<text transform="matrix(1.06 0 0 1 70.1267 96.8488)"><tspan x="0" y="0" class="st3 st4 st5">Deforestation &amp; Reforestation </tspan><tspan x="0" y="45.6" class="st3 st4 st5">Rates compared to Annual </tspan><tspan x="0" y="91.2" class="st3 st4 st5">Income, 2015</tspan></text>
+	<rect x="70.1" y="70.9" class="st0" width="593.9" height="153"/>
+	<text transform="matrix(1.06 0 0 1 70.1267 96.8488)"><tspan x="0" y="0" class="st1 st2 st3">Deforestation &amp; Reforestation </tspan><tspan x="0" y="45.6" class="st1 st2 st3">Rates compared to Annual </tspan><tspan x="0" y="91.2" class="st1 st2 st3">Income, 2015</tspan></text>
 	<g>
-		<text transform="matrix(1.06 0 0 1 740.0171 81)" class="st3 st4 st6">About the Data</text>
+		<text transform="matrix(1.06 0 0 1 740.0171 81)" class="st1 st2 st4">About the Data</text>
 	</g>
-	<text transform="matrix(1 0 0 1 735.9998 225)"><tspan x="0" y="0" class="st3 st4 st6">Forest Area </tspan><tspan x="118" y="0" class="st3 st4 st6">(</tspan><tspan x="126.1" y="0" class="st3 st4 st6">km²)</tspan></text>
-	<text transform="matrix(1 0 0 1 735.9998 385.8501)" class="st3 st4 st6">Change of Forest Area (% of Change)</text>
-	<text transform="matrix(1 0 0 1 735.9999 486)" class="st3 st4 st6">Country Income</text>
+	<text transform="matrix(1 0 0 1 735.9998 225)"><tspan x="0" y="0" class="st1 st2 st4">Forest Area </tspan><tspan x="118" y="0" class="st1 st2 st4">(</tspan><tspan x="126.1" y="0" class="st1 st2 st4">km²)</tspan></text>
+	<text transform="matrix(1 0 0 1 735.9998 385.8501)" class="st1 st2 st4">Change of Forest Area (% of Change)</text>
+	<text transform="matrix(1 0 0 1 735.9999 486)" class="st1 st2 st4">Country Income</text>
 	<g>
-		<rect x="740" y="89.9" class="st2" width="356" height="147"/>
-		<text transform="matrix(1.06 0 0 1 740.0173 101.4478)"><tspan x="0" y="0" class="st3 st7 st8">Forest area land changes between years 1990 </tspan><tspan x="0" y="20.4" class="st3 st7 st8">and 2015 for 187 world nations based on UN </tspan><tspan x="0" y="40.8" class="st3 st7 st8">FAO data. Countries for which</tspan><tspan x="224.6" y="40.8" class="st3 st7 st8"> </tspan><tspan x="229.4" y="40.8" class="st3 st7 st8">data was </tspan><tspan x="0" y="61.2" class="st3 st7 st8">unavailable or incomplet</tspan><tspan x="175.9" y="61.2" class="st3 st7 st8 st9">e</tspan><tspan x="182.4" y="61.2" class="st3 st7 st8"> are not included in </tspan><tspan x="0" y="81.6" class="st3 st7 st8">this data set.</tspan></text>
+		<rect x="740" y="89.9" class="st0" width="356" height="147"/>
+		<text transform="matrix(1.06 0 0 1 740.0173 101.4478)"><tspan x="0" y="0" class="st1 st5 st6">Forest area land changes between years 1990 </tspan><tspan x="0" y="20.4" class="st1 st5 st6">and 2015 for 187 world nations based on UN </tspan><tspan x="0" y="40.8" class="st1 st5 st6">FAO data. Countries for which data was </tspan><tspan x="0" y="61.2" class="st1 st5 st6">unavailable or incomplet</tspan><tspan x="175.9" y="61.2" class="st1 st5 st6 st7">e</tspan><tspan x="182.4" y="61.2" class="st1 st5 st6"> are not included in </tspan><tspan x="0" y="81.6" class="st1 st5 st6">this data set.</tspan></text>
 	</g>
-	<rect x="736" y="234.1" class="st2" width="360" height="193.5"/>
-	<text transform="matrix(1 0 0 1 736.0002 245.6699)"><tspan x="0" y="0" class="st3 st10 st8">Forest area is land under natural or planted stands </tspan><tspan x="0" y="20.4" class="st3 st10 st8">of trees of at least 5 meters in situ, whether pro</tspan><tspan x="333.7" y="20.4" class="st3 st10 st8">-</tspan><tspan x="0" y="40.8" class="st3 st10 st8">ductive or not, and excludes tree stands in agricul</tspan><tspan x="343.6" y="40.8" class="st3 st10 st8">-</tspan><tspan x="0" y="61.2" class="st3 st10 st8">tural production systems (for example, in fruit plan</tspan><tspan x="351.4" y="61.2" class="st3 st10 st8">-</tspan><tspan x="0" y="81.6" class="st3 st10 st8">tations and agroforestry systems) and trees in </tspan><tspan x="0" y="102" class="st3 st10 st8">urban parks and gardens.</tspan></text>
-	<rect x="736" y="396" class="st2" width="360" height="207"/>
-	<text transform="matrix(1 0 0 1 736.0001 407.604)"><tspan x="0" y="0" class="st3 st10 st8">The gain and loss of forest lands </tspan><tspan x="226.3" y="0" class="st3 st10 st8">(</tspan><tspan x="232.5" y="0" class="st3 st10 st8">reforestation or </tspan><tspan x="0" y="20.4" class="st3 st10 st8">deforestation) during this perio</tspan><tspan x="216" y="20.4" class="st3 st10 st8">d</tspan><tspan x="225" y="20.4" class="st3 st10 st8"> indicates the </tspan><tspan x="0" y="40.8" class="st3 st10 st8">percentage of forest area change</tspan></text>
-	<rect x="736" y="496.2" class="st2" width="360" height="151.5"/>
-	<text transform="matrix(1 0 0 1 735.9998 507.7529)"><tspan x="0" y="0" class="st3 st10 st8">High, higher-middle, lower-middle, and low income </tspan><tspan x="0" y="20.4" class="st3 st10 st8">groupings are based on World Bank classfications</tspan><tspan x="341.5" y="20.4" class="st3 st10 st8"> </tspan></text>
+	<rect x="736" y="234.1" class="st0" width="360" height="193.5"/>
+	<text transform="matrix(1 0 0 1 736.0002 245.6699)"><tspan x="0" y="0" class="st1 st8 st6">Forest area is land under natural or planted stands </tspan><tspan x="0" y="20.4" class="st1 st8 st6">of trees of at least 5 meters in situ, whether pro</tspan><tspan x="333.7" y="20.4" class="st1 st8 st6">-</tspan><tspan x="0" y="40.8" class="st1 st8 st6">ductive or not, and excludes tree stands in agricul</tspan><tspan x="343.6" y="40.8" class="st1 st8 st6">-</tspan><tspan x="0" y="61.2" class="st1 st8 st6">tural production systems (for example, in fruit plan</tspan><tspan x="351.4" y="61.2" class="st1 st8 st6">-</tspan><tspan x="0" y="81.6" class="st1 st8 st6">tations and agroforestry systems) and trees in </tspan><tspan x="0" y="102" class="st1 st8 st6">urban parks and gardens.</tspan></text>
+	<rect x="736" y="396" class="st0" width="360" height="207"/>
+	<text transform="matrix(1 0 0 1 736.0001 407.604)"><tspan x="0" y="0" class="st1 st8 st6">The gain and loss of forest lands </tspan><tspan x="226.3" y="0" class="st1 st8 st6">(</tspan><tspan x="232.5" y="0" class="st1 st8 st6">reforestation or </tspan><tspan x="0" y="20.4" class="st1 st8 st6">deforestation) during this perio</tspan><tspan x="216" y="20.4" class="st1 st8 st6">d</tspan><tspan x="225" y="20.4" class="st1 st8 st6"> indicates the </tspan><tspan x="0" y="40.8" class="st1 st8 st6">percentage of forest area change.</tspan></text>
+	<rect x="736" y="496.2" class="st0" width="360" height="151.5"/>
+	<text transform="matrix(1 0 0 1 735.9998 507.7529)"><tspan x="0" y="0" class="st1 st8 st6">High, higher-middle, lower-middle, and low income </tspan><tspan x="0" y="20.4" class="st1 st8 st6">groupings are based on World Bank classfications.</tspan><tspan x="345.3" y="20.4" class="st1 st8 st6"> </tspan></text>
 	
 		<image style="overflow:visible;" width="6667" height="1001" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAGgsAAAPpCAYAAACPkUt9AAAACXBIWXMAAC4jAAAuIwF4pT92AAA5
 +GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0w
@@ -2877,7 +2874,7 @@ B9zKZr/vrLU7igYAAAAAAAC4fneBr1uIyPHs35gFD1TQa2N99s9HvZYAAAAAAAAA3ICgBLwul/FY
 AAAAuFG1E/An68GfrmW9NMZMKE7csoqNV1n3HQAAAAAAALhRTWbAi7X2KCIPZ//8qglI4Fa9nv03
 674DAAAAAAAAN+z/DgBhpOWysOgVeAAAAABJRU5ErkJggg==" transform="matrix(0.2283 0 0 0.2283 1185.1516 72.7688)">
 	</image>
-	<rect x="70.1" y="234" class="st2" width="593.9" height="161"/>
-	<text transform="matrix(1.06 0 0 1 70.1271 250.3675)"><tspan x="0" y="0" class="st3 st10 st11">This graph examines the correlation between the </tspan><tspan x="0" y="28.8" class="st3 st10 st11">national economic standing of individual countries and </tspan><tspan x="0" y="57.6" class="st3 st10 st11">the change in their forest area since 1990.</tspan></text>
+	<rect x="70.1" y="234" class="st0" width="593.9" height="161"/>
+	<text transform="matrix(1.06 0 0 1 70.1272 250.3675)"><tspan x="0" y="0" class="st1 st8 st9">This graph examines the correlation between the </tspan><tspan x="0" y="28.8" class="st1 st8 st9">national economic standing of individual countries and </tspan><tspan x="0" y="57.6" class="st1 st8 st9">the change in their forest area since 1990.</tspan></text>
 </g>
 </svg>
