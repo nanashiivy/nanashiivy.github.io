@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+    div.tooltip {   
+      position: absolute;           
+      text-align: center;           
+      width: auto;                  
+      height: auto;                 
+      padding: 10px;             
+      font: 12px sans-serif;        
+      background: white;   
+      border: 0px;      
+      border-radius: 2px;           
+      pointer-events: none;
+      font-family: "Gill Sans";
+      letter-spacing: 0.6px;
+
+    }
+    text.numbers {
+      font-size: 12px;
+      font-family: "Gill Sans";
+      color: grey;
+    }
+</style>
+
+
+<body style="background-color:#F3F3F5;">
+<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript">
+
+//---- Canvas size--------
+var width = 1415;
+var height = 7000;
+
+
+//----Starting variables
+var lastYear = [];
+var incomeGroup = [];
+var changeP = [];
+var treeData;
+
+var colors = ["#6CD7C6", "#6CDAA9", "#6BDE8A", "#6BE16A", "#8DE569", "#B2E968", "#D9EC67", "#F0DC66", "#F3B664", "#F78E63", "#FA6261"];
+
+
+//-----Load data----------------------------------------
+d3.csv("data/Forest_Land_SqM_Test.csv", function(myData){  
+
+    treeData = myData;
+    
+    //----Load forest area per country-------
+    for (var i = 0; i<treeData.length; i++) {
+        lastYear.push(parseInt(myData[i][2015]));
+    }
+
+    //----Income group per country-------
+    for (var i = 0; i<treeData.length; i++) {
+        incomeGroup.push(myData[i].IncomeGroup);
+    }
+
+    //----Load % change in forest area per country-------
+    for (var i = 0; i<treeData.length; i++) {
+        changeP.push(parseFloat(myData[i]["% of change"]));
+    }
+
+
+    //----Load min/max values for linear scales used further down---------
+    var min = d3.min(lastYear);
+    var max = d3.max(lastYear);
+
+    var pMin = d3.min(changeP);
+    var pMax = d3.max(changeP);
+
+
+    //----Radius mapping------------------------------------------------
+    var rScale = d3.scale.linear() 
+                .domain([min, max])
+                .range([10, 125])
+
+
+    var nodes = d3.range(lastYear.length).map(function(d,i) { 
+
+        return {
+            radius : rScale(lastYear[i])
+            }
+        }),
+    
+    root = nodes[0];
+
+
+    //---Position income group columns--------------
+    var incomeGroupEnum = ["Low income","Lower middle income","Upper middle income","High income"];
+    var incomeGroupEnumValues = [width*0.2857, width*0.4286, width*0.5715, width*0.7144];
+
+    
+    //---Map circles along y axis depending on forest area percentage change
+    var yScale = d3.scale.linear() 
+        .domain([pMin, pMax])
+        .range([765, height-550])
+
+
+    //----Assign colour based on % of change in forest area
+    var colorScale = d3.scale.quantize()
+        .domain([pMax,pMin])
+        .range(colors);
+
+
+    //---Create tooltip-----------------------------
+    var div = d3.select("body").append("div")   
+      .attr("class", "tooltip")               
+      .style("opacity", 0);
+
+
+    //----Make SVG in which all the magic happens-----------------------------------------------
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+        
+        
+        //----Vertical income lines-------------------
+        svg.append("line")
+          .attr("x1", width*0.2857)
+          .attr("y1", 765)
+          .attr("x2", width*0.2857)
+          .attr("y2", height-550)
+          .attr("stroke-width", 1)
+          .style("stroke-dasharray", ("3, 3"))
+          .attr("stroke", "grey")
+          .style("opacity", 0.5);
+
+        svg.append("line")
+          .attr("x1", width*0.4286)
+          .attr("y1", 765)
+          .attr("x2", width*0.4286)
+          .attr("y2", height-550)
+          .attr("stroke-width", 1)
+          .style("stroke-dasharray", ("3, 3"))
+          .attr("stroke", "grey")
+          .style("opacity", 0.5);
+
+        svg.append("line")
+          .attr("x1", width*0.5715)
+          .attr("y1", 765)
+          .attr("x2", width*0.5715)
+          .attr("y2", height-550)
+          .attr("stroke-width", 1)
+          .style("stroke-dasharray", ("3, 3"))
+          .attr("stroke", "grey")
+          .style("opacity", 0.5);
+        
+        svg.append("line")
+          .attr("x1", width*0.7144)
+          .attr("y1", 765)
+          .attr("x2", width*0.7144)
+          .attr("y2", height-550)
+          .attr("stroke-width", 1)
+          .style("stroke-dasharray", ("3, 3"))
+          .attr("stroke", "grey")
+          .style("opacity", 0.5);
+
+        
+        //horizontal 0% delineator-----------------
+        svg.append("line")
+          .attr("x1", 0)
+          .attr("y1", function(d) { 
+                return yScale(0)})
+          .attr("x2", width)
+          .attr("y2", function(d) { 
+                return yScale(0)})
+          .attr("stroke-width", 1)
+          .attr("stroke", "grey")
+          .style("opacity", 0.5);
+
+        svg.append("text")
+          .attr("x", 10)             
+          .attr("y", function(d) { 
+                return (yScale(0)) - 10})
+          .attr("text-anchor", "right")  
+          .style("font-size", "13px") 
+          .style("font-family", "Gill Sans")  
+          .style("fill", "grey")
+          .style("opacity", 0.7)
+          .text("0% change in forest area (sq. km)");
+
+
+        //----All the circles-----------------------
+        svg.selectAll("circle")
+            .data(myData)
+            .enter().append("circle")
+            .attr("r", function(d) { 
+                return rScale(+d["2015"]); })
+            .attr("cx", function(d) { 
+                return incomeGroupEnumValues[incomeGroupEnum.indexOf(d.IncomeGroup)]; })
+            .attr("cy", function(d) { 
+              return yScale((parseFloat(d["% of change"]))); })
+            .style("fill", function(d,i){
+              return colorScale(parseFloat(d["% of change"])); })
+            .style("opacity", 0.8)
+
+            //----TOOLTIP------------------
+            .on("mouseover", function(d,i) {      
+                div.transition()        
+                    .duration(200)      
+                    .style("opacity", 1);
+
+                div.html("<b>" + d["Country Name"] + "</b>" + "<br/>" + "Change in forest area: <br/>" + d["% of change"])  
+                    .style("left", (d3.event.pageX + 30) + "px")     
+                    .style("top", (d3.event.pageY - 30) + "px")
+                    .style("color", "black");
+                })                  
+
+            .on("mouseout", function(d) {       
+                div.transition()        
+                    .duration(500)      
+                    .style("opacity", 0);   
+            //-----------------------------
+
+        });
+
+        
+        //----Percentage scale on left hand side------------
+        var numberScale = [-70, -60, -50, -40, -30, -20, -10, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200];
+
+        svg.selectAll(".numbers")
+            .data(numberScale)
+            .enter()
+              .append("text")
+              .attr('class', 'numbers')
+              .attr("x", 10)
+              .attr("y", function(d) { 
+                return yScale(d)})
+              .attr("text-anchor", "right")  
+              .text(function(d){ return d +"%" })
+              .style("fill", "grey")
+              .style("opacity", 0.7);
+        //--------------------------------------------------
+
+
+
+        //----Header & footer images-------------------------
+        var g = svg.append("g");
+
+        var headerImg = g.append("svg:image")
+            .attr("xlink:href", "header.svg")
+            .attr("x", 5)
+            .attr("y",0)
+            .attr("width", "100%");
+
+        var footerImg = g.append("svg:image")
+            .attr("xlink:href", "bottom.svg")
+            .attr("x", 3)
+            .attr("y",height-525)
+            .attr("width", "100%");
+
+        //----------------------------------------------------
+
+})
+
+
+</script>
+
+</body>
+</html> 
