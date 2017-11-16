@@ -118,7 +118,7 @@ function buttonColour(buttonID) {
 	var idElement = document.getElementById(buttonID);
 	var idName = idElement.id;
 	document.getElementById(idName).style.backgroundColor = "green" ;
-}
+}}
 
 // Array.prototype.remove = function() {
 //     var what, a = arguments, L = a.length, ax;
